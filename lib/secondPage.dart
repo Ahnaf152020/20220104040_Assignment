@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 class second_page extends StatefulWidget {
   @override
@@ -41,13 +40,13 @@ class _second_pageState extends State<second_page> {
   }
 
   void pressed2() {
-    selection="Visa";
+    selection="Nagad";
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return Expanded(
           child: AlertDialog(
-            title: Center(child: Text('Selected VISA')),
+            title: Center(child: Text('Selected Nagad')),
             //content: Text('Payment Successful'),
           ),
         );
@@ -70,20 +69,7 @@ class _second_pageState extends State<second_page> {
     );
   }
 
-  void pressed4() {
-    selection="AMEX";
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return Expanded(
-          child: AlertDialog(
-            title: Center(child: Text('Selected AMEX')),
-            // content: Text('Payment Successful'),
-          ),
-        );
-      },
-    );
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -95,8 +81,8 @@ class _second_pageState extends State<second_page> {
           "Payment Method",
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.white,
-            fontSize: 25,
+            color: Colors.lime,
+            fontSize: 20,
           ),
         ),
         backgroundColor: Colors.deepOrangeAccent,
@@ -108,10 +94,10 @@ class _second_pageState extends State<second_page> {
           Center(
             child: Container(
               height: (716 / 802) * screenH,
-              //width: (370 / 392) * screenW,
+
               decoration: BoxDecoration(
                 // borderRadius: BorderRadius.circular(21),
-                color: Colors.red,
+                color: Colors.redAccent,
               ),
 
               child: Column(
@@ -120,14 +106,14 @@ class _second_pageState extends State<second_page> {
                   Container(
                     width: (240/372)*screenW,
                     decoration: BoxDecoration(
-                      color: Colors.lime,
-                      borderRadius: BorderRadius.circular(15),
-                      // border: Border.all(width: 1,color: Colors.white),
+                      color: Colors.deepOrangeAccent,
+                      borderRadius: BorderRadius.circular(20),
+
                     ),
                     child: Center(
                       child: DropdownButton(
                         value: d_value,
-                        borderRadius: BorderRadius.circular(21),
+                        borderRadius: BorderRadius.circular(15),
                         onChanged: (String? n_value) {
                           setState(() {
                             d_value = n_value!;
@@ -157,7 +143,7 @@ class _second_pageState extends State<second_page> {
 
                     decoration: BoxDecoration(
                       color: Colors.lime,
-                      borderRadius: BorderRadius.circular(21),
+                      borderRadius: BorderRadius.circular(15),
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -170,41 +156,43 @@ class _second_pageState extends State<second_page> {
 
                               Padding(
                                 padding:  EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Text("Payment Methods : ",style: TextStyle(fontSize: 23,color: Colors.deepOrange,fontWeight: FontWeight.bold),),
+                                child: Text("Payment Methods : ",style: TextStyle(fontSize: 23,color: Colors.grey,fontWeight: FontWeight.bold),),
                               ),
                               Container(height: (50/872)*screenH,),
                               Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   //Container(width: (0/392)*screenW,),
                                   Container(width: (90/373)*screenW,),
                                   GestureDetector(
                                       onTap: pressed,
                                       child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                          SizedBox.fromSize(size: Size((90/392)*screenW,0)),
+                                          SizedBox.fromSize(size: Size(0,0)),
 
                                           Image.asset(
-                                            "assets/images/bkash.webp",
-                                            height:  screenH,
-                                            width:  screenW,
+                                            "Images/Bkash.png",
+                                            height: 50 ,
+                                            width: 50,
                                           ),
-                                          SizedBox.fromSize(size: Size((20/392)*screenW,0)),
-                                         // Text("bkash",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black54,),),
+                                          SizedBox.fromSize(size: Size(0,0)),
+                                          //Text("bkash",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black54,),),
                                         ],
                                       )),
                                   // Container(width: (90/373)*screenW,),
                                   GestureDetector(
                                       onTap: pressed1,
                                       child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                          SizedBox.fromSize(size: Size((90/392)*screenW,0)),
+                                          SizedBox.fromSize(size: Size(0,0)),
                                           Image.asset(
-                                            "assets/images/rocket.png",
-                                            height: (60 / 872) * screenH,
-                                            width: (60 / 372) * screenW,
+                                            "Images/Rocket.png",
+                                            height: 50,
+                                            width: 50,
                                           ),
-                                          SizedBox.fromSize(size: Size((20/392)*screenW,0)),
+                                          SizedBox.fromSize(size: Size(0,0)),
                                          // Text("rocket",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black54,),),
                                         ],
                                       )),
@@ -215,15 +203,16 @@ class _second_pageState extends State<second_page> {
                                   GestureDetector(
                                       onTap: pressed2,
                                       child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                          SizedBox.fromSize(size: Size((90/392)*screenW,0)),
+                                          SizedBox.fromSize(size: Size(0,0)),
                                           Image.asset(
-                                            "assets/images/visa.png",
-                                            height: (60 / 872) * screenH,
-                                            width: (60 / 372) * screenW,
+                                            "Images/Nagad.webp",
+                                            height: 50,
+                                            width: 50,
                                           ),
-                                          SizedBox.fromSize(size: Size((20/392)*screenW,0)),
-                                        //  Text("visa",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black54,),),
+                                          SizedBox.fromSize(size: Size(0,0)),
+                                          //Text("visa",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black54,),),
                                         ],
                                       )),
 
@@ -233,35 +222,22 @@ class _second_pageState extends State<second_page> {
                                   GestureDetector(
                                       onTap: pressed3,
                                       child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                          SizedBox.fromSize(size: Size((90/392)*screenW,0)),
+                                          SizedBox.fromSize(size: Size(0,0)),
                                           Image.asset(
-                                            "assets/images/mastercard.png",
-                                            height: (60 / 872) * screenH,
-                                            width: (60 / 372) * screenW,
+                                            "Images/masterCard.png",
+                                            height: 50,
+                                            width: 50,
                                           ),
-                                          SizedBox.fromSize(size: Size((20/392)*screenW,0)),
+                                          SizedBox.fromSize(size: Size(0,0)),
                                          // Text("mastercard",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black54,),),
                                         ],
                                       )),
 
 
                                   Container(width: (90/373)*screenW,),
-                                  GestureDetector(
-                                      onTap: pressed4,
-                                      child: Row(
-                                        children: [
-                                          SizedBox.fromSize(size: Size((90/392)*screenW,0)),
-                                          Image.asset(
-                                            "assets/images/amex.png",
-                                            height: (60 / 872) * screenH,
-                                            width: (60 / 372) * screenW,
-                                          ),
-                                          SizedBox.fromSize(size: Size((20/392)*screenW,0)),
-                                         // Text("the american express",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black54,),),
 
-                                        ],
-                                      )),
 
 
                                 ],
@@ -277,11 +253,11 @@ class _second_pageState extends State<second_page> {
                         Container(
 
 
-                            width:(screenW),
-                            height: (120 / 872) * screenH,
+                            width:screenW,
+                            height: 80,
                             decoration: BoxDecoration(
-                              color: Colors.red,
-                              borderRadius: BorderRadius.circular(23),
+                              color: Colors.amber,
+                              borderRadius: BorderRadius.circular(30),
 
                             ),
                             child:
@@ -301,10 +277,7 @@ class _second_pageState extends State<second_page> {
 
                                               child: AlertDialog(
 
-                                                title: Center(child: Text('Please Select a payment method')),
-
-
-                                                content: Text('Payment not Successful!'),
+                                                content: Text('Ready to pay',),
 
                                               ),
                                             );
@@ -342,26 +315,36 @@ class _second_pageState extends State<second_page> {
                                   child: Container(
 
                                     height: (50/872)*screenH,
-                                    width:0.1*screenW,
+                                    width:( 100/392)*screenW,
                                     decoration: BoxDecoration(
-                                      color:Colors.blueGrey,
-                                      borderRadius: BorderRadius.circular(25),
+                                      color:Colors.white,
+                                      borderRadius: BorderRadius.circular(19),
                                     ),
-                                    child: Center(child: Text("Pay Now",style: TextStyle(fontWeight:FontWeight.bold),),),
+                                    child: Center(child: Text("Pay Now",style:TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color:Colors.deepOrange),),),
                                   ),
                                 ),
-                                Icon(Icons.keyboard_double_arrow_right,color:Colors.white,size:30 ,),
-                                SizedBox.fromSize(size: Size((0.01)*screenW,0)),
+
+                                SizedBox.fromSize(size: Size((100/392)*screenW,0)),
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text("Bdt. 10,990",style:TextStyle(fontWeight: FontWeight.bold,fontSize: 30,color:Colors.white)),
-                                    Container(width:30,),
-                                    Column(
+                                    Text("Bdt. 10,990 (Including Tax)",style:TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color:Colors.deepOrange)),
+                                    Row(
                                       children: [
-                                        //Icon(Icons.arrow_back_ios_new,color:Colors.white70),
-                                        GestureDetector(onTap:(){Navigator.pop(context);},
-                                          child: Center( child: Text( "GO Back",style: TextStyle(fontWeight:FontWeight.bold),))),
+
+                                        GestureDetector(
+                                            onTap:(){Navigator.pop(context);},
+                                            child: Container(
+
+                                              height: (50/872)*screenH,
+                                              width:( 100/392)*screenW,
+                                              decoration: BoxDecoration(
+                                                color:Colors.white,
+                                                borderRadius: BorderRadius.circular(19),
+                                              ),
+
+                                            child:Center( child: Text("Go Back",style:TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color:Colors.deepOrange)))),
+                                            ),
                                       ],
                                     ),
                                   ],

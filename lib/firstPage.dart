@@ -34,9 +34,9 @@ class _FirstpageState extends State<Firstpage> {
               height: (240 / 872) * height,
               decoration: BoxDecoration(color: Colors.amberAccent),
               child: Center(
-                  child: Image.asset("images/Tab2019.jpeg",
-                      height:  height,
-                      width:  width))),
+                  child: Image.asset("Images/Tab2019.jpg",
+                      height: 200,
+                      width:  300))),
           Container(
             height: (12 / 802.72) * height,
           ),
