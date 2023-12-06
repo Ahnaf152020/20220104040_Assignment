@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment20220104040/firstPage.dart';
 
-/*void main() {
+void main() {
   runApp(const MyApp());
 }
 
@@ -17,53 +17,15 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    double screenW = MediaQuery
-        .of(context)
-        .size
-        .width;
-    double screenH = MediaQuery
-        .of(context)
-        .size
-        .height;
+    double width=MediaQuery.of(context).size.width;
+    double Height=MediaQuery.of(context).size.height;
 
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Assignment 20220104040',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.grey.shade300,
-
-
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        //colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
-        useMaterial3: true,
+        scaffoldBackgroundColor: Colors.white70,
       ),
-      //home: SafeArea(child: Firstpage()),
+      home:  SafeArea(child: Firstpage()),
     );
-  }
-}*/
-void main() {
-  runApp(  MyApp());
-}
-
-class  MyApp extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        home: FirstPage()
-    );
-
   }
 }
