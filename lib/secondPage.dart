@@ -17,7 +17,7 @@ class _second_pageState extends State<second_page> {
         return Expanded(
           child: AlertDialog(
             title: Center(child: Text('Selected Bkash')),
-            // content: Text('Payment Successful'),
+             content: Text('Payment is Successful'),
           ),
         );
       },
@@ -32,7 +32,7 @@ class _second_pageState extends State<second_page> {
         return Expanded(
           child: AlertDialog(
             title: Center(child: Text('Selected Rocket')),
-            //content: Text('Payment Successful'),
+            content: Text('Payment is Successful'),
           ),
         );
       },
@@ -47,7 +47,7 @@ class _second_pageState extends State<second_page> {
         return Expanded(
           child: AlertDialog(
             title: Center(child: Text('Selected Nagad')),
-            //content: Text('Payment Successful'),
+            content: Text('Payment is Successful'),
           ),
         );
       },
@@ -62,7 +62,7 @@ class _second_pageState extends State<second_page> {
         return Expanded(
           child: AlertDialog(
             title: Center(child: Text('Selected MasterCard')),
-            //content: Text('Payment Successful'),
+            content: Text('Payment  is Successful'),
           ),
         );
       },
@@ -73,8 +73,8 @@ class _second_pageState extends State<second_page> {
 
   @override
   Widget build(BuildContext context) {
-    double screenW = MediaQuery.of(context).size.width;
-    double screenH = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -90,13 +90,13 @@ class _second_pageState extends State<second_page> {
       body: Column(
         children: [
 
-          // Container(height: (70 / 872) * screenH),
+
           Center(
             child: Container(
-              height: (716 / 802) * screenH,
+              height: (716 / 802) * height,
 
               decoration: BoxDecoration(
-                // borderRadius: BorderRadius.circular(21),
+
                 color: Colors.redAccent,
               ),
 
@@ -104,7 +104,7 @@ class _second_pageState extends State<second_page> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
-                    width: (240/372)*screenW,
+                    width: (240/372)*width,
                     decoration: BoxDecoration(
                       color: Colors.deepOrangeAccent,
                       borderRadius: BorderRadius.circular(20),
@@ -124,8 +124,8 @@ class _second_pageState extends State<second_page> {
                               value: "Choose a payment method",
                               child: Text("Choose a payment method")),
                           DropdownMenuItem<String>(
-                              value: "Cash on Delivery",
-                              child: Text("Cash on Delivery")),
+                              value: "POS Payment",
+                              child: Text("POS Payment")),
                           DropdownMenuItem<String>(
                               value: "Online Payment",
                               child: Text("Online Payment")),
@@ -135,11 +135,11 @@ class _second_pageState extends State<second_page> {
                     ),
                   ),
                   Container(
-                    height: (50/872)*screenH,
+                    height: (50/872)*height,
                   ),
 
                   Container(
-                    height: (620 / 872) * screenH,
+                    height: (620 / 872) * height,
 
                     decoration: BoxDecoration(
                       color: Colors.lime,
@@ -150,7 +150,7 @@ class _second_pageState extends State<second_page> {
                       children: [
 
                         Column(
-                          //mainAxisAlignment: MainAxisAlignment.start,
+
                             children: [
 
 
@@ -158,12 +158,12 @@ class _second_pageState extends State<second_page> {
                                 padding:  EdgeInsets.fromLTRB(0, 0, 0, 0),
                                 child: Text("Payment Methods : ",style: TextStyle(fontSize: 23,color: Colors.grey,fontWeight: FontWeight.bold),),
                               ),
-                              Container(height: (50/872)*screenH,),
+                              Container(height: (50/872)*height,),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  //Container(width: (0/392)*screenW,),
-                                  Container(width: (90/373)*screenW,),
+
+                                  Container(width: (90/373)*width,),
                                   GestureDetector(
                                       onTap: pressed,
                                       child: Row(
@@ -177,10 +177,10 @@ class _second_pageState extends State<second_page> {
                                             width: 50,
                                           ),
                                           SizedBox.fromSize(size: Size(0,0)),
-                                          //Text("bkash",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black54,),),
+
                                         ],
                                       )),
-                                  // Container(width: (90/373)*screenW,),
+
                                   GestureDetector(
                                       onTap: pressed1,
                                       child: Row(
@@ -193,7 +193,7 @@ class _second_pageState extends State<second_page> {
                                             width: 50,
                                           ),
                                           SizedBox.fromSize(size: Size(0,0)),
-                                         // Text("rocket",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black54,),),
+
                                         ],
                                       )),
 
@@ -212,7 +212,7 @@ class _second_pageState extends State<second_page> {
                                             width: 50,
                                           ),
                                           SizedBox.fromSize(size: Size(0,0)),
-                                          //Text("visa",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black54,),),
+
                                         ],
                                       )),
 
@@ -231,12 +231,12 @@ class _second_pageState extends State<second_page> {
                                             width: 50,
                                           ),
                                           SizedBox.fromSize(size: Size(0,0)),
-                                         // Text("mastercard",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.black54,),),
+
                                         ],
                                       )),
 
 
-                                  Container(width: (90/373)*screenW,),
+                                  Container(width: (90/373)*width,),
 
 
 
@@ -244,8 +244,8 @@ class _second_pageState extends State<second_page> {
                               ),
                             ]),
                         Container(
-                          height: (70 / 872) * screenH,
-                          //color: Colors.black54,
+                          height: (70 / 872) * height,
+
 
                         ),
 
@@ -253,7 +253,7 @@ class _second_pageState extends State<second_page> {
                         Container(
 
 
-                            width:screenW,
+                            width:width,
                             height: 80,
                             decoration: BoxDecoration(
                               color: Colors.amber,
@@ -263,7 +263,7 @@ class _second_pageState extends State<second_page> {
                             child:
                             Row(
                               children: [
-                                SizedBox.fromSize(size:Size((30/392)*screenW,0)),
+                                SizedBox.fromSize(size:Size((30/392)*width,0)),
                                 GestureDetector (
                                   onTap: (){
                                     setState(() {
@@ -295,7 +295,7 @@ class _second_pageState extends State<second_page> {
                                                 title: Center(child: Text('$selection ($d_value)')),
 
 
-                                                content: Text('Payment Successful!'),
+                                                content: Text('Bdt. 10,990 is paid successfully'),
 
                                               ),
                                             );
@@ -314,8 +314,8 @@ class _second_pageState extends State<second_page> {
 
                                   child: Container(
 
-                                    height: (50/872)*screenH,
-                                    width:( 100/392)*screenW,
+                                    height: (50/872)*height,
+                                    width:( 100/392)*width,
                                     decoration: BoxDecoration(
                                       color:Colors.white,
                                       borderRadius: BorderRadius.circular(19),
@@ -324,11 +324,11 @@ class _second_pageState extends State<second_page> {
                                   ),
                                 ),
 
-                                SizedBox.fromSize(size: Size((100/392)*screenW,0)),
+                                SizedBox.fromSize(size: Size((100/392)*width,0)),
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text("Bdt. 10,990 (Including Tax)",style:TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color:Colors.deepOrange)),
+
                                     Row(
                                       children: [
 
@@ -336,8 +336,8 @@ class _second_pageState extends State<second_page> {
                                             onTap:(){Navigator.pop(context);},
                                             child: Container(
 
-                                              height: (50/872)*screenH,
-                                              width:( 100/392)*screenW,
+                                              height: (50/872)*height,
+                                              width:( 100/392)*width,
                                               decoration: BoxDecoration(
                                                 color:Colors.white,
                                                 borderRadius: BorderRadius.circular(19),

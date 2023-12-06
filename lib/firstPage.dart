@@ -18,7 +18,7 @@ class _FirstpageState extends State<Firstpage> {
       appBar: AppBar(
         backgroundColor: Colors.indigoAccent,
         title: Text(
-          "ShopUp App",
+          "TechGadget App",
           style: TextStyle(
               fontSize: 28, fontWeight: FontWeight.bold, color: Colors.redAccent),
         ),
@@ -62,7 +62,7 @@ class _FirstpageState extends State<Firstpage> {
                       color: Colors.brown,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      //fontSize: 15,
+
                     ),
                   ),
                 ),
@@ -90,7 +90,7 @@ class _FirstpageState extends State<Firstpage> {
             ),
             child: Column(
               children: [
-                //Container(height: (10/802)*screenH,),
+
                 Padding(
                   padding:
                   EdgeInsets.symmetric(horizontal: (20 / 392.72) * width,vertical: (9/872)*height),
